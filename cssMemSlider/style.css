@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background-color: #25282a;
+  color: #fff;
+  padding-top: 3%;
+}
+
+.slider {
+  margin: 0 auto;
+  font-size: 1.5em;
+  width: 80%;
+  max-width: 90rem;
+}
+
+.slider-slide-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-slide-inner {
+  display: flex;
+  transition: all .5s;
+}
+
+.slider-slide-item {
+  height: 50rem;
+  border-radius: 1rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slider-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.slider-descr {
+  transition: all .5s;
+}
+
+.slider-descr-item {
+  display: none;
+  transform: translateX(100%);
+  transition: all .5s;
+}
+
+.slider-pagination {
+  display: flex;
+  flex-direction: row;
+}
+
+.slider-pagination-item {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #71abfe;
+  transition: all .5s;
+  border: 0.5rem solid #25282a;
+}
+
+.slider-pagination-item:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.slider-pagination-item_active {
+  background-color: #25282a;
+  box-shadow: 0px 0px 0px 0.15rem #71abfe inset;
+}
+
+.slider-pagination-item_active:hover {
+  background-color: #25282a;
+  box-shadow: 0px 0px 0px .15rem #fff inset;
+}
+
+@media (max-width: 1400px) {
+  .slider-slide-item {
+    height: 40rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .slider-slide-item {
+    height: 34rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .slider {
+    width: 90%;
+    height: 30rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    font-size: 1.2em;
+  }
+  .slider-slide-item {
+    height: 25rem;
+  }
+  .slider-wrapper {
+    flex-direction: column;
+  }
+  .slider-pagination {
+    order: 1;
+    align-self: center;
+  }
+  .slider-descr {
+    order: 2;
+  }
+}
+
+@media (max-width: 567px) {
+  .slider {
+    font-size: 1.2em;
+  }
+  .slider-slide-item {
+    height: 17rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .slider {
+    font-size: 1em;
+  }
+  .slider-pagination-item {
+    width: .7rem;
+    height: .7rem;
+  }
+  .slider-slide-item {
+    height: 12rem;
+  }
+}
